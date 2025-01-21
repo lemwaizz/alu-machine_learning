@@ -5,4 +5,4 @@ def matrix_shape(matrix):
     shape = []
     shape.append(rows)
     shape.append(columns)
-    print(shape)
+    return shape
