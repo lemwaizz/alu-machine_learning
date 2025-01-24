@@ -21,7 +21,7 @@ def add_arrays(arr1, arr2):
     """
     if isinstance(arr1[0], list) and isinstance(arr2[0], list):
         if len(arr1) != len(arr2) or len(arr1[0]) != len(arr2[0]):
-            raise ValueError("Incompatible matrix dimensions")
+            return None
         result_matrix = [[0 for _ in range(len(arr1[0]))]
                          for _ in range(len(arr1))]
         for i in range(len(arr1)):
@@ -29,7 +29,7 @@ def add_arrays(arr1, arr2):
                 result_matrix[i][j] = arr1[i][j] + arr2[i][j]
     else:
         if len(arr1) != len(arr2):
-            raise ValueError("Incompatible array dimensions")
+            return None
         result_matrix = [0 for _ in range(len(arr1))]
         for i in range(len(arr1)):
             result_matrix[i] = arr1[i] + arr2[i]
