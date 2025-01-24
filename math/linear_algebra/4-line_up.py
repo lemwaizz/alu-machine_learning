@@ -19,6 +19,8 @@ def add_arrays(arr1, arr2):
     Raises:
         ValueError: If the arrays have incompatible dimensions.
     """
+    if not arr1 or not arr2:
+        return None
     if isinstance(arr1[0], list) and isinstance(arr2[0], list):
         if len(arr1) != len(arr2) or len(arr1[0]) != len(arr2[0]):
             return None
